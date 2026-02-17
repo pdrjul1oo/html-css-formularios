@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pesquisa Culturama</title>
 </head>
+
 <body>
     <header>
 
@@ -12,13 +14,48 @@
     <main>
         <h1>Pesquisa Online</h1>
         <section>
-             <!--form serve para indicar que um formulário foi criado-->
-            <form action="" method="get"> <!--get faz que as coisas do formulário vão pra URL do site--> 
+            <!--form serve para indicar que um formulário foi criado-->
+            <form action="" method="get"> <!--get faz que as coisas do formulário vão pra URL do site-->
 
-                <fieldset> <!--fieldset indica que os inputs abaixo tem relação semântica entre si-->
+                <!-- 
+                fieldset → indica que os inputs abaixo têm relação semântica entre si.
+
+                legend → título do grupo de campos.
+
+                label → texto que identifica o input.
+                for → deve ser igual ao id do input para conectar os dois.
+
+                id → identifica o input dentro da página.
+                    é usado pelo label (for), CSS e JavaScript.
+
+                name → é o nome que o dado vai ter quando o formulário for enviado.
+                        exemplo: se a pessoa digitar "pedro",
+                        na URL (método GET) ficará: userName=pedro
+
+                required → torna o campo obrigatório.
+
+                min e max → definem valor mínimo e máximo permitido.
+
+                pattern → define quais caracteres são permitidos e a quantidade.
+                        exemplo: [0-9]{11}
+                        entre colchetes = quais números são permitidos
+                        entre chaves = quantidade de dígitos
+
+                placeholder → texto que aparece como exemplo dentro do campo.
+
+                accept → define quais tipos de arquivo podem ser enviados.
+
+                IMPORTANTE:
+                se o input não tiver "name", o valor NÃO será enviado no formulário.
+                -->
+
+                <!-- <fieldset> 
                     <legend>Dados pessoais</legend>
-                    <label for="userName">Nome:</label> <!--for serve para indicar a qual input o label está associado-->
-                    <input type="text" name="userName" required> <br><!--se a resposta do input for 'pedro', na URL ficaria userName="pedro" e o required torna o campo obrigatorio-->
+
+                    <label for="userName">Nome:</label>
+                    <input type="text" name="userName" required>
+                    <br>
+
                     <label for="userAge">Idade:</label>
                     <input type="number" name="age" min="12" max="100" required> <br>
 
@@ -27,13 +64,72 @@
 
                     <label for="userEmail">Email:</label>
                     <input type="email" name="userEmail" required> <br>
-                    
+
                     <label for="userPhoneNumber">Telefone:</label>
                     <input type="tel" pattern="[0-9]{11}" placeholder="11111111111"> <br>
-                     <!--no pattern, entre colchetes significa quais numeros sao permitidos e entre chaves significa a quantidade de digitos-->
+                    
                     <label for="userImage">Upload de foto:</label>
                     <input type="file" accept="image/*" name="userImage"> <br>
-                    
+
+                </fieldset> -->
+
+                <!--
+                Com type radio, só uma bolinha pode ser selecionada desde que as bolinhas tenham values diferentes
+                -->
+                <fieldset>
+                    <legend>Perfil</legend>
+
+                    <p>Gênero:</p>
+                    <input type="radio" name="userGender" value="Feminino">
+                    <label for="userGender">Feminino</label>
+                    <input type="radio" name="userGender" value="Masculino">
+                    <label for="userGender">Masculino</label>
+                    <input type="radio" name="userGender" value="notInformed">
+                    <label for="userGender">Prefiro não informar</label> <br> <br>
+
+                    <label for="maritalStatus">Estado civil:</label>
+                    <select name="maritalStatus">
+                        <option value="notInformed">Selecione...</option>
+                        <option value="casado">Casado</option>
+                        <option value="solteiro">Solteiro</option>
+                        <option value="divorciado">Divorciado</option>
+                        <option value="casado">União Estável</option>
+                    </select>
+
+                    <label for="userState">Estado</label>
+                    <select name="userState">
+                        <option value="notInformed">Selecione...</option>
+                        <option value="Acre">Acre</option>
+                        <option value="Alagoas">Alagoas</option>
+                        <option value="Amapá">Amapá</option>
+                        <option value="Amazonas">Amazonas</option>
+                        <option value="Bahia">Bahia</option>
+                        <option value="Ceará">Ceará</option>
+                        <option value="Distrito Federal">Distrito Federal</option> 
+                        <option value="Espirito Santo">Espirito Santo</option> 
+                        <option value="Goiás">Goiás</option>
+                        <option value="Maranhão">Maranhão</option>
+                        <option value="Mato Grosso do Sul">Mato Grosso do Sul</option> 
+                        <option value="Mato Grosso">Mato Grosso</option> 
+                        <option value="Minas Gerais">Minas Gerais</option> 
+                        <option value="Pará">Pará</option>
+                        <option value="Paraíba">Paraíba</option>
+                        <option value="Paraná">Paraná</option>
+                        <option value="Pernambuco">Pernambuco</option>
+                        <option value="Piauí">Piauí</option>
+                        <option value="Rio de Janeiro">Rio de Janeiro</option> 
+                        <option value="Rio Grande do Norte">Rio Grande do Norte</option> 
+                        <option value="Rio Grande do Sul">Rio Grande do Sul</option> 
+                        <option value="Rondônia">Rondônia</option>
+                        <option value="Roraima">Roraima</option>
+                        <option value="Santa Catarina">Santa Catarina</option> 
+                        <option value="São Paulo">São Paulo</option>
+                        <option value="Sergipe">Sergipe</option>
+                        <option value="Tocantins">Tocantins</option>
+                    </select>
+
+                    <label for="userCity">Cidade:</label>
+                    <input type="text" name="userCity">
                 </fieldset>
 
                 <button type="submit">Enviar</button>
@@ -45,4 +141,5 @@
 
     </footer>
 </body>
+
 </html>
