@@ -49,7 +49,7 @@
                 se o input não tiver "name", o valor NÃO será enviado no formulário.
                 -->
 
-                <!-- <fieldset> 
+                <fieldset>
                     <legend>Dados pessoais</legend>
 
                     <label for="userName">Nome:</label>
@@ -67,15 +67,16 @@
 
                     <label for="userPhoneNumber">Telefone:</label>
                     <input type="tel" pattern="[0-9]{11}" placeholder="11111111111"> <br>
-                    
+
                     <label for="userImage">Upload de foto:</label>
                     <input type="file" accept="image/*" name="userImage"> <br>
+                </fieldset>
 
-                </fieldset> -->
 
                 <!--
                 Com type radio, só uma bolinha pode ser selecionada desde que as bolinhas tenham values diferentes
                 -->
+
                 <fieldset>
                     <legend>Perfil</legend>
 
@@ -97,7 +98,7 @@
                     </select>
 
                     <label for="userState">Estado</label>
-                    <select name="userState" required> <!--required pode ser usado no select também-->
+                    <select name="userState" required>
                         <option value="notInformed">Selecione...</option>
                         <option value="acre">Acre</option>
                         <option value="alagoas">Alagoas</option>
@@ -105,24 +106,24 @@
                         <option value="amazonas">Amazonas</option>
                         <option value="bahia">Bahia</option>
                         <option value="ceara">Ceará</option>
-                        <option value="distritoFederal">Distrito Federal</option> 
-                        <option value="espiritoSanto">Espirito Santo</option> 
+                        <option value="distritoFederal">Distrito Federal</option>
+                        <option value="espiritoSanto">Espirito Santo</option>
                         <option value="goias">Goiás</option>
                         <option value="maranhao">Maranhão</option>
-                        <option value="matoGrossoDoSul">Mato Grosso do Sul</option> 
-                        <option value="matoGrosso">Mato Grosso</option> 
-                        <option value="minasGerais">Minas Gerais</option> 
+                        <option value="matoGrossoDoSul">Mato Grosso do Sul</option>
+                        <option value="matoGrosso">Mato Grosso</option>
+                        <option value="minasGerais">Minas Gerais</option>
                         <option value="para">Pará</option>
                         <option value="paraiba">Paraíba</option>
                         <option value="parana">Paraná</option>
                         <option value="pernambuco">Pernambuco</option>
                         <option value="piaui">Piauí</option>
-                        <option value="rioDeJaneiro">Rio de Janeiro</option> 
-                        <option value="rioGrandeDoNorte">Rio Grande do Norte</option> 
-                        <option value="rioGrandeDoSul">Rio Grande do Sul</option> 
+                        <option value="rioDeJaneiro">Rio de Janeiro</option>
+                        <option value="rioGrandeDoNorte">Rio Grande do Norte</option>
+                        <option value="rioGrandeDoSul">Rio Grande do Sul</option>
                         <option value="rondonia">Rondônia</option>
                         <option value="roraima">Roraima</option>
-                        <option value="santaCatarina">Santa Catarina</option> 
+                        <option value="santaCatarina">Santa Catarina</option>
                         <option value="sãoPaulo">São Paulo</option>
                         <option value="sergipe">Sergipe</option>
                         <option value="tocantins">Tocantins</option>
@@ -130,6 +131,23 @@
 
                     <label for="userCity">Cidade:</label>
                     <input type="text" name="userCity">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Hábitos</legend>
+                    <p>Redes sociais</p>
+                    <input type="checkbox" name="social" value="instagram">
+                    <label for="social">Instagram</label>
+                    <br>
+                    <input type="checkbox" name="social" value="facebook">
+                    <label for="social">Facebook</label>
+                    <br>
+                    <input type="checkbox" name="social" value="linkedin">
+                    <label for="social">Linkedin</label>
+                    <br>
+                    <input type="checkbox" name="social" value="twitter">
+                    <label for="social">Twitter</label>
+
                 </fieldset>
 
                 <button type="submit">Enviar</button>
