@@ -158,8 +158,27 @@
                     </datalist> <br>
 
                     <label for="favoriteColor">Cor favorita: </label>
-                    <input type="color" name="userFavoriteColor" id="favoriteColor">
+                    <input type="color" name="userFavoriteColor" id="favoriteColor"> <br>
 
+                </fieldset>
+
+                <fieldset>
+                    <legend>Opinião</legend>
+                    <p>O que você acha da qualidade do nosso serviço?:</p>
+                    <input type="radio" name="userOpinion" value="otima" id="great">
+                    <label for="great">Ótima</label>
+
+                    <input type="radio" name="userOpinion" value="otima" id="good">
+                    <label for="good">Boa</label>
+
+                    <input type="radio" name="userOpinion" value="reasonable" id="reasonable">
+                    <label for="reasonable">Razoável</label>
+
+                    <input type="radio" name="userOpinion" value="ruim" id="bad">
+                    <label for="bad">Ruim</label> <br>
+
+                    <label for="openComment">Comentário: </label> <br>
+                    <textarea name="userOpenComment" id="openComment" placeholder="Digite aqui sua opinião..."></textarea>
                 </fieldset>
 
                 <button type="submit">Enviar</button>
