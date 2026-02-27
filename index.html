@@ -5,17 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pesquisa Culturama</title>
+    <link rel="shortcut icon" href="culturama-favico.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header>
-
-    </header>
     <main>
-        <h1>Pesquisa Online</h1>
+        <header>
+            <img src="img/logo-culturama.png" alt="logo culturama">
+            <h1>Pesquisa de Opinião</h1>
+        </header>
         <section>
             <!--form serve para indicar que um formulário foi criado-->
-            <form action="" method="get"> <!--get faz que as coisas do formulário vão pra URL do site-->
+            <form action="sucesso.html" method="get"> <!--get faz que as coisas do formulário vão pra URL do site-->
 
                 <!-- 
                 fieldset → indica que os inputs abaixo têm relação semântica entre si.
@@ -57,7 +62,7 @@
                     <br>
 
                     <label for="age">Idade:</label>
-                    <input type="number" name="userAge" min="12" max="100" id="age"> <br>
+                    <input type="number" name="userAge" min="12" max="100" id="age" required> <br>
 
                     <label for="birthDate">Data de Nascimento:</label>
                     <input type="date" name="userBirthDate" id="birthDate"> <br>
@@ -66,7 +71,8 @@
                     <input type="email" name="userEmail" id="email" required> <br>
 
                     <label for="phoneNumber">Telefone:</label>
-                    <input type="tel" pattern="[0-9]{11}" placeholder="11111111111" name="userPhoneNumber" id="phoneNumber"> <br>
+                    <input type="tel" pattern="[0-9]{11}" placeholder="11111111111" name="userPhoneNumber"
+                        id="phoneNumber"> <br>
 
                     <label for="image">Upload de foto:</label>
                     <input type="file" accept="image/*" name="userImage" id="image"> <br>
@@ -178,7 +184,8 @@
                     <label for="bad">Ruim</label> <br>
 
                     <label for="openComment">Comentário: </label> <br>
-                    <textarea name="userOpenComment" id="openComment" placeholder="Digite aqui sua opinião..."></textarea>
+                    <textarea name="userOpenComment" id="openComment"
+                        placeholder="Digite aqui sua opinião..."></textarea>
                 </fieldset>
 
                 <fieldset>
